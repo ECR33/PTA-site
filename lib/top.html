@@ -38,6 +38,9 @@
         </td>
       </tr>
       <? } else {
+        if(ret.length == 0){ ?>
+        <tr><td>まだコンテンツがありません。<a href="https://<?= url ?>" target="_blank">はてなブログ</a></td></tr>
+      <? }
       for (let i=0; i<ret.length; i++) { 
       let title = ret[i].getChildText("title")
       let link = ret[i].getChildText("link")
