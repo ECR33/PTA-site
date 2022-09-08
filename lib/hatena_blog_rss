@@ -1,0 +1,59 @@
+function doGet(e) {
+  Logger.log(e)
+  var template = HtmlService.createTemplateFromFile('top');
+  if (e.parameter.url) {
+    template.url = e.parameter.url
+  } else {
+    template.url = ""
+  }
+  if (e.parameter.category) {
+    template.category = e.parameter.category
+  } else {
+    template.category = ""
+  }
+  Logger.log(`url: ${template.url}, category: ${template.category}`)
+  return template.evaluate();
+}
+
+function get_hatena_rss(url, category) {
+
+  if (url == "") {
+    return "はてなブログのドメインを指定してください。スキーム部分は不要です。カテゴリーも必要に応じて指定してください。例: ?url=xterm.hatenablog.com&category=運動会"
+  }
+  var my_rss
+  if (category != "") {
+    my_rss = `https://${url}/rss/category/${category}?exclude_body=1`;
+  } else {
+    my_rss = `https://${url}/rss?exclude_body=1`;
+  }
+  // フィードURL
+  Logger.log(my_rss)
+
+  // フィードを取得
+  var rss_data = UrlFetchApp.fetch(my_rss);
+  // XMLをパース
+  var rss_xml = XmlService.parse(rss_data.getContentText());
+  // 各データの要素を取得
+  var rss_entries = rss_xml.getRootElement().getChildren('channel')[0].getChildren('item');
+
+  for (var i = 0; i < rss_entries.length; i++) {
+
+    Logger.log(rss_entries[i].getChildText("title"));
+    Logger.log(rss_entries[i].getChildText("link"));
+    Logger.log(rss_entries[i].getChildText("pubDate")); // 公開日時
+    // Logger.log(rss_entries[i].getChildText("description"));
+  }
+
+  return rss_entries
+
+}
+
+function debugDoGet() {
+  const e = {
+    parameter: {
+      url: 'xterm.hatenablog.com',
+      category: '総務'
+    }
+  }
+  const a = doGet(e);
+}

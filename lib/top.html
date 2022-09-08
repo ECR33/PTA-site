@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <style>
+    table {
+      margin: 1em auto;
+    }
+
+    td {
+      padding: 0.3em 2em;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(10, 10, 40);
+    }
+
+    a:visited {
+      color: rgb(100, 100, 100);
+    }
+
+    .h_link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tbody>
+      <? var ret = get_hatena_rss(url,category) ?>
+      <? if ( typeof ret == "string") { ?>
+      <tr>
+        <td>
+          <?= ret ?>
+        </td>
+      </tr>
+      <? } else {
+      for (let i=0; i<ret.length; i++) { 
+      let title = ret[i].getChildText("title")
+      let link = ret[i].getChildText("link")
+      let date_str = Utilities.formatDate((new Date(ret[i].getChildText("pubDate"))), 'JST', 'yyyy-MM-dd HH:mm') ?>
+      <tr>
+        <td class="h_link"><a href="<?= link ?>" target="_blank">
+            <?= title ?>
+          </a></td>
+        <td>
+          <?= date_str ?>
+        </td>
+      </tr>
+      <? } 
+
+      } ?>
+    </tbody>
+  </table>
+</body>
+
+</html>
