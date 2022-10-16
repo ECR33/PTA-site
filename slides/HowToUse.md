@@ -82,11 +82,13 @@ https://sites.google.com/view/hinogakupta/
   - イベントの開催通知
   - ホームページの更新案内 など
 - 以下のアドレスに:email:メール送信！
-  d3q0p4qg72.hjrkvyqvna2r4@blog.hatena.ne.jp (※取扱注意)
+  xxxxxxxxxxxxx@blog.hatena.ne.jp (※)
   - メールを送るだけで掲載
   - HTMLメールも可 (盛れる！)
   - 記事のタイトルがトップページに掲載される
     - クリックしたら本文へ
+
+※ 伏せ字にしました。[記事の投稿方法](https://sites.google.com/view/hinogakupta-members/ptaホームページ説明/記事の投稿方法)からご確認ください。(2022/10/16)
 
 ---
 
@@ -129,10 +131,20 @@ https://sites.google.com/view/hinogakupta-members/ptaホームページ説明/�
 
 ### Google Sites (アクセス制限あり)
 
-閲覧者を制限できる場所。特定のグループに所属しているユーザのみ閲覧できるよう設定されています。
+閲覧者を制限できる場所。特定のグループに所属しているユーザのみ閲覧できるよう設定されています。(※次ページ参照)
+
+![bg opacity:.1](../img/IMG_20211009_095509.jpg)
+
+---
+### Google Sites (アクセス制限あり)
+#### アクセス可能グループ
 
 - R4日野学園PTA総務(hinogaku-soumu-r4@googlegroups.com)
-  ※ いま(2022年10月15日時点)のところ
+- R4日野学園PTA安全部(hinogaku-anzen-r4@googlegroups.com)
+- R4日野学園PTA学年部(hinogaku-gakunen-r4@googlegroups.com)
+- R4日野学園PTA教養部(hinogaku-kyouyou-r4@googlegroups.com)
+- R4日野学園PTA広報部(hinogaku-kouhou-r4@googlegroups.com)
+  ※ 2022年10月16日時点
 
 ![bg opacity:.1](../img/IMG_20211009_095509.jpg)
 
